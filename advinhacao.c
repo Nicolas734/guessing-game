@@ -8,7 +8,7 @@ int main(){
     printf("Bem vindo ao jogo de advinhacao\n");
     printf("-------------------------------\n");
 
-    int numero_secreto = 42;
+    int numerosecreto = 42;
     int chute;
 
     for (int i = 1; i <= TENTATIVAS; i++)
@@ -24,8 +24,8 @@ int main(){
             continue;
         }
 
-        int acertou = (chute == numero_secreto);
-        int maior = (chute > numero_secreto);
+        int acertou = (chute == numerosecreto);
+        int maior = (chute > numerosecreto);
 
         if(acertou){
             printf("\nParabens! Voce acertou!\n");
