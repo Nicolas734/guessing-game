@@ -1,25 +1,26 @@
 #include <stdio.h>
 
+#define TENTATIVAS 5
+
 
 int main(){
-    // cabeçalho do jogo
     printf("-------------------------------\n");
     printf("Bem vindo ao jogo de advinhacao\n");
     printf("-------------------------------\n");
 
     int numero_secreto = 42;
     int chute;
-    int count = 3;
-    for (int i = 1; i <= count; i++)
-    {
 
-        printf("\nTentativa %d de %d\n", i, count);
+    for (int i = 1; i <= TENTATIVAS; i++)
+    {
+        printf("\nTentativa %d de %d\n", i, TENTATIVAS);
         printf("Qual eh o seu chute? ");
         scanf("%d", &chute);
         printf("seu chute foi %d", chute);
         int acertou = (chute == numero_secreto);
         if(acertou){
             printf("\nParabens! Voce acertou!\n");
+            break;
         }else{
             int maior = (chute > numero_secreto);
             if(maior){
@@ -33,4 +34,3 @@ int main(){
     printf("\nFim de jogo!\n");
 
 }
-
